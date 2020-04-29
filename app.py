@@ -8,8 +8,8 @@ import boto3
 from PIL import Image, ImageDraw, ExifTags, ImageColor
 
 
-ACCESS_KEY = 'AKIA2ZXLTV4AQHSEO46C'
-SECRET_KEY = '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'
+ACCESS_KEY = ''
+SECRET_KEY = ''
         
         
 app = Flask(__name__, static_folder='public', static_url_path='')
