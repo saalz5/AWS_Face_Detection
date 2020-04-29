@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+  <head>
+    {% block head %}
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <title>{% block title %}{% endblock %}</title>
+    {% endblock %}
+  </head>
+  
+   <body>
+    
+	
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+	  <a class="navbar-brand" href="#">AWS FACE DETECTION</a>
+	  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	  </button>
+
+	  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		<ul class="navbar-nav mr-auto">
+		
+		<li class="nav-item">
+         <a class="nav-link" href="about">About <span class="sr-only">(current)</span></a>
+       </li>
+	   
+	   {% if 'userid' not in session %}
+	   <li class="nav-item">
+         <a class="nav-link" href="login">Login <span class="sr-only">(current)</span></a>
+       </li>
+	   {% endif %}
+	  
+	  
+		{% if 'userid' in session %}
+		
+	  
+	  <li class="nav-item">
+        <a class="nav-link" href="home">Upload <span class="sr-only">(current)</span></a>
+      </li>
+	  
+	  <li class="nav-item">
+        <a class="nav-link" href="display">S3 Images <span class="sr-only">(current)</span></a>
+      </li>
+	  {% endif %}
+	  
+		  
+		 
+		</ul>
+	  </div>
+	  {% if 'userid' in session %}
+	  <div class="pull-right"> 
+		<span class="nav-link" href="#">{% if 'userid' in session %} Hello {{ session['fullname'] }} {% endif %}</span>
+	  </div>
+	  {% endif %}
+	  
+	  {% if 'userid' in session %}
+	  <div class="pull-right"> 
+		<a href="logout">Logout</a>
+	  </div>
+	  {% endif %}
+	</nav>
+
+
+
+<div id="content">{% block content %}{% endblock %}</div>
+
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+
+	</body>
+</html>
+

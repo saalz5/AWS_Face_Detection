@@ -1,0 +1,46 @@
+{% extends "index.html" %}
+
+
+{% block title %}
+	HOME PAGE
+{% endblock %}
+
+{% block content %}
+
+<section class="jumbotron" style="height: 600px;">
+    <div class="text-center">
+	
+		
+	
+        <h1 class="jumbotron-heading">Welcome</h1>
+		{% if error == True %}
+        <div class="alert alert-success md-3" style="margin-left: 35%; margin-right: 35%; margin-bottom:30px;">
+      
+        Image Uplaoded to S3 Bucket
+		</div>
+		
+		{% endif %}
+		
+        <p class="lead text-muted">Please Upload Image to Recognize Faces</p>
+		
+		<div class="frame">
+			<div class="center">
+				<form class="form-upload" action ="{{ url_for('home') }}" method="POST" enctype="multipart/form-data">  
+				
+					<img src="http://100dayscss.com/codepen/upload.svg" class="upload-icon" />
+					<br>
+					<input type="file" class="btn btn-default btn-choose" name="img" required/>
+					<br>
+					<br>
+					<div class="row justify-content-center">
+					  <button type="submit" class="btn btn-primary col-md-3">Upload</button>
+					</div>
+
+				</form>
+			</div>
+		</div>
+
+    </div>
+</section>
+
+{% endblock %}

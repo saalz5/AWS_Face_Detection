@@ -1,0 +1,45 @@
+{% extends "index.html" %}
+
+
+{% block title %}
+	Display
+{% endblock %}
+
+{% block content %}
+
+
+<dir class="jumbotron">
+
+
+<section> 
+    <h1 class="text-center">S3 Images</h1>
+    <p class="text-center">list of All S3 Images</p>
+
+
+    <table class="table table-hover">
+  <thead class="success">
+    <tr class="success">
+      <th >Image</th>
+      <th >Action</th>
+    </tr>
+  </thead>
+  <tbody>
+		  {% for img in data %}
+		<tr>
+		  <td><img src="https://bkalziyadi.s3.amazonaws.com/{{ img }}" width="100" > </td>
+		  <td>
+			<a href="detection?img={{img}}" class="btn btn-success">Faces Detection</a>
+			
+        </td>
+		</tr>
+		{% endfor %}
+		
+	</tbody>
+
+
+	</table>
+</section>
+
+</div>
+
+{% endblock %}

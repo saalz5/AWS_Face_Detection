@@ -1,0 +1,49 @@
+{% extends "index.html" %}
+
+
+{% block title %}
+	Display
+{% endblock %}
+
+{% block content %}
+
+
+<dir class="jumbotron">
+
+
+<section> 
+    <h1 class="text-center">Faces Detected</h1>
+    <p class="text-center">list of All Faces Detected</p>
+
+
+    <table class="table table-hover">
+  <thead class="success">
+    <tr class="success">
+      <th >Image</th>
+      <th >Description</th>
+    </tr>
+  </thead>
+  <tbody>
+		<tr>
+		  <td><img src="reko/{{images}}"  width="500" height="500" > </td>
+		  <td>
+			<p>Number of Detected Faces: <span style="color:red;">{{total}}</span></p>
+			
+			<ul>
+			{% for dt in data %}
+				<li>{{dt}}</li>
+			{% endfor %}
+			</ul>
+			
+        </td>
+		</tr>
+		
+	</tbody>
+
+
+	</table>
+</section>
+
+</div>
+
+{% endblock %}
