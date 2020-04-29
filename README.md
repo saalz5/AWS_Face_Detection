@@ -27,11 +27,17 @@ This App is intended to detect all faces on any image along with description for
 ### References
 
 [S3 Bucket](https://aws.amazon.com/s3/faqs)
+
 [AWS Rekognition](https://docs.aws.amazon.com/rekognition/latest/dg/what-is.html)
+
 [AWS Rekognition](https://aws.amazon.com/rekognition/faqs/)
+
 [AWS Rekognition](https://docs.aws.amazon.com/rekognition/latest/dg/API_Reference.html)
+
 [lambda](https://aws.amazon.com/lambda/faqs/)
+
 [AWS EC2](https://aws.amazon.com/ec2/faqs/)
+
 [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 
 
