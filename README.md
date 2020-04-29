@@ -22,6 +22,7 @@ This App is intended to detect all faces on any image along with description for
         python3 app.py
     ```
     URL of the applciation will be shown on terminal like: `http://127.0.0.1:5000`
+    Default username/password saad/2020
 
 
 ### References
